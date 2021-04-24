@@ -1575,131 +1575,20 @@ else if(selectbox.value === "11-20"){
 else if(selectbox.value === "31-40"){
       function Change() { [a, h, e,f,g,max] = [30, 38, 40,40,40,90];}
       Change();
-      function Quizset () {
-        const b = Math.floor(Math.random() * (max - e)) + e ;
-        let c = Math.floor(Math.random() * (max - f)) + f ;
-        let d = Math.floor(Math.random() * (max - g)) + g ;
-      Qnum.textContent = `No.${a + 1}`;
-      question.textContent = quizSet[a].q;
-      
-      var speak   = new SpeechSynthesisUtterance();
-      speak.text  = question.textContent;
-      speak.rate  = 1;   speak.pitch = 1;
-      speak.lang  = 'en-US'; 
-      
-      speechSynthesis.speak(speak);
-      
-      
-      while(choice1.firstChild){
-      choice1.removeChild(choice1.firstChild);
-      }
-      
-      item1.textContent = quizSet[a].c;
-      const ul1 = document.querySelector('ul');
-        ul1.appendChild(item1);
-      
-        item2.textContent = WrongAns[b];
-        const ul = document.querySelector('ul');
-          ul.appendChild(item2);
-      
-        item3.textContent = WrongAns[c];
-        const ul2 = document.querySelector('ul');
-          ul.appendChild(item3);
-        
-         item4.textContent = WrongAns[d];
-         const ul3 = document.querySelector('ul');
-           ul.appendChild(item4);
-      
-      
-           function shuffle() {
-      
-            const x = Math.floor(Math.random() * 4 + 1) ;
-            //console.log(x);
-            
-            if(x == 1){ 
-              ul.insertBefore(item3,item1);
-              ul.insertBefore(item2,item1);
-              ul.insertBefore(item4,item1);
-          
-            }else if(x == 2){
-              ul.insertBefore(item1,item4);
-              ul.insertBefore(item2,item1);
-            }else if(x == 3){
-              ul.insertBefore(item1,item3);
-              ul.insertBefore(item2,item1);
-            }
-            else{
-              ul.insertBefore(item4,item2);
-            }
-          }
-          
-          shuffle();
-      
-          function checkAnswer(){
-              
-            let event = function(e){
-              let t = e.target;
-              if(t == item1){
-                
-                alert('正解👍');
-                
-              choice1.removeEventListener('click',event);
-              if(a > h){
-                var Finish   = new SpeechSynthesisUtterance();
-                Finish.text  = 'Great!!Good job!!';
-                Finish.rate  = 1; // 読み上げ速度 0.1-10 初期値:1 (倍速なら2, 半分の倍速なら0.5, )
-                Finish.pitch = 1;　// 声の高さ 0-2 初期値:1(0で女性の声) 
-                Finish.lang  = 'en-US'; //(日本語:ja-JP, アメリカ英語:en-US, イギリス英語:en-GB, 中国語:zh-CN, 韓国語:ko-KR)
-                speechSynthesis.speak(Finish);
-      
-                   alert(`合格!!`)
-                  location.reload();
-              }else{
-                a++;
-              }
-              Quizset();
-          
-            }else{
-      
-                alert(`不正解🙅 \n 答えは「${item1.textContent}」`); 
-                var OMT   = new SpeechSynthesisUtterance();
-                OMT.text  = 'one more time';
-                OMT.rate  = 1; // 読み上げ速度 0.1-10 初期値:1 (倍速なら2, 半分の倍速なら0.5, )
-                OMT.pitch = 1;　// 声の高さ 0-2 初期値:1(0で女性の声) 
-                OMT.lang  = 'en-US'; //(日本語:ja-JP, アメリカ英語:en-US, イギリス英語:en-GB, 中国語:zh-CN, 韓国語:ko-KR)
-                speechSynthesis.speak(OMT);
-                alert(`やりなおしです😩`); 
-      
-                choice1.removeEventListener('click',event);
-                Change();
-      
-                //a = 0; h = 8; e = 0;f = 0;g = 0;max =60; 
-                Quizset();
-                
-      
-      //            location.reload();
-              }};
-      
-            choice1.addEventListener('click',event,false);
-                    }
-           checkAnswer();
-      
-      }
       Quizset();
     }
 else if(selectbox.value === "41-50"){
 function Change() { [a, h, e,f,g,max] = [40, 48, 50,50,50,100];}
 Change();
+Quizset();
 }
 else if(selectbox.value === "51-60"){
-       
-       function Change() { [a, h, e,f,g,max] = [10, 18, 60,60,60,110];}
+       function Change() { [a, h, e,f,g,max] = [50, 58, 60,60,60,110];}
 Change();
 Quizset();
 }
 else if(selectbox.value === "61-70"){
-      
-      function Change() { [a, h, e,f,g,max] = [60, 68, 0,0,0,50];}
+            function Change() { [a, h, e,f,g,max] = [60, 68, 0,0,0,50];}
 Change();Quizset();
 }
 else if(selectbox.value === "71-80"){
