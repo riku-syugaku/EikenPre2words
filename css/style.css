@@ -149,35 +149,96 @@ background:#f8f8f8;
 
 
 
-/* #choices{
-    
+
+button {
+    text-align: center;
+    padding: 10px auto;
+    font-size:20px;
+    font-weight:bold;
 }
 
-#choice2 > li.correct{
-    background: #d4edda;
-    border-color: #c3e6cd;
-    color:#155724 ;
-    font-weight: bold;   
+#modal
+{
+    background:green;
+    width:400px;
+    height:400px;
+    padding:30px 20px 30px 20px;
+    border-radius:14px;
+    position:absolute;
+    margin:0 auto;
+    right:0;
+    left:0;
+    transition:transform 0.4s;
+    font-size:25px;
+    color:white;
+    font-weight:bold;
+    text-align: center;
+    line-height:80px;
+}
+#modal2 
+{
+    background:red;
+    width:400px;
+    height:400px;
+    padding:30px 10px 30px 10px;
+    border-radius:14px;
+    position:absolute;
+    /* margin-top:50px; */
+    right:0;
+    left:0;
+    transition:transform 0.4s;
+    font-size:30px;
+    color:white;
+    font-weight:bold;
+    text-align: center;
+    line-height:50px;
+}
+#modal3 
+{
+    background:rgb(20, 104, 138);
+    width:400px;
+    height:400px;
+    padding:20px;
+    border-radius:14px;
+    position:absolute;
+    /* margin:0 auto; */
+    right:0;
+    left:0;
+    transition:transform 0.4s;
+    font-size:40px;
+    color:rgb(238, 225, 225);
+    font-weight:bold;
+    text-align: center;
+    line-height:100px;
+}
+#modal > p{
+    margin:0 0 20px;
+}
+#modal2 > p{
+    margin:0 0 20px;
+}
+#mask.hidden{
+    display:none;
+}
+#modal.hidden,
+#modal2.hidden,
+#modal3.hidden
+{
+    transform:translate(0, -600px);
 }
 
-
-#choices > li.correct::after{
-    content: '   ...正解👍';
+#modal > button,
+#modal2 > button,
+#modal1 > button
+{
+    padding:20px 5px;
+    width:150px;
+    font-size:20px;
+    font-weight: bold;
+    border-radius:10px;
+    background:rgb(208, 200, 200);
 }
-
-#choices > li.wrong::after{
-    content: '   ...残念😢';
+img{
+    width:170px;
+    height:170px;
 }
-
-
-#choices > li.wrong{
-    background: #f8d8da;
-    border-color: #cf5c6b;
-    color:#721 ;
-    font-weight: bold;   
-}
-
-
- */
-
-
